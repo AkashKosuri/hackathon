@@ -1,1 +1,1 @@
-this is project abut therapy
+This is a project about therapy
