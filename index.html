@@ -1,58 +1,49 @@
-<index.html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Therapy</title>
+    <title>Therapy AI - Your Safe Place</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Add Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Video Background -->
+    <video autoplay muted loop id="video-background">
+        <source src="black-cat.mp4" type="video/mp4">
+        <!-- Fallback Image -->
+        <img src="images/fallback.jpg" alt="Fallback Image">
+        Your browser does not support the video tag.
+    </video>
+
     <!-- Navigation Bar -->
     <nav>
-        <div class="logo">AI Therapy</div>
+        <div class="logo">Therapy AI</div>
         <ul>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">How It Works</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#">About Us</a></li>
             <li><a href="#">FAQ</a></li>
-            <li><a href="selection.html" class="cta">Get Started</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Professional Therapy, Powered by AI</h1>
-            <p>Experience confidential, accessible, and personalized mental health support 24/7.</p>
-            <a href="selection.html" class="btn">Start Your Journey</a>
-        </div>
+        <h1>Welcome to Your Safe Place</h1>
+        <p>Experience confidential, accessible, and personalized mental health support 24/7.</p>
+        <a href="selection.html" class="btn">Let’s Get Started</a>
     </header>
-
-    <!-- Features Section -->
-    <section class="features">
-        <h2>Why Choose AI Therapy</h2>
-        <div class="feature-boxes">
-            <div class="feature">
-                <h3>Confidential & Secure</h3>
-                <p>Your privacy is our top priority. All conversations are encrypted and completely private.</p>
-            </div>
-            <div class="feature">
-                <h3>24/7 Availability</h3>
-                <p>Access support anytime, anywhere.</p>
-            </div>
-            <div class="feature">
-                <h3>Personalized Growth</h3>
-                <p>AI-driven insights help track progress.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 AI Therapy. All rights reserved.</p>
+        <div class="footer-content">
+            <h3>Why Choose Therapy AI?</h3>
+            <ul>
+                <li><strong>Confidential & Secure:</strong> Your privacy is our top priority. All conversations are encrypted and completely private.</li>
+                <li><strong>24/7 Availability:</strong> Access support anytime, anywhere.</li>
+                <li><strong>Personalized Growth:</strong> AI-driven insights help track progress.</li>
+            </ul>
+            <p>© 2024 Therapy AI. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

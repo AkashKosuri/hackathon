@@ -7,11 +7,290 @@
 }
 
 body {
-    background-color: #f0f4f8; /* Light, calming background */
     color: #2d3748; /* Dark gray for text */
     line-height: 1.6;
+    overflow: hidden;
+}
+/* Video Background */
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: -1; /* Ensures it stays behind other content */
 }
 
+/* Update Hero Section Text Color for Better Contrast */
+.hero {
+    color: #ffffff; /* White text for better contrast */
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    color: #2d3748; /* Dark gray for text */
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(26, 26, 46, 0.8); /* Semi-transparent dark blue */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif; /* Elegant font for the logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e94560; /* Soft red for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff; /* White text for better contrast */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #e94560; /* Soft red for buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #c2334a; /* Darker red for hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(26, 26, 46, 0.8); /* Semi-transparent dark blue */
+    color: #ffffff;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
+}
+
+.footer-content ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-content ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer-content p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(26, 26, 46, 0.8); /* Semi-transparent dark blue */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif; /* Elegant font for the logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e94560; /* Soft red for hover effect */
+}
+
+/* Hero Section */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #2d3748; /* Dark gray for text */
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 15px 30px;
+    background-color: #e94560; /* Soft red for buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #c2334a; /* Darker red for hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(26, 26, 46, 0.8); /* Semi-transparent dark blue */
+    color: #ffffff;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; /* Elegant font for headings */
+}
+
+.footer-content ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-content ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer-content p {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Canvas Styling */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays in the background */
+}
 /* Navigation Bar */
 nav {
     display: flex;
