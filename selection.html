@@ -1,0 +1,71 @@
+<selection.html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Options - AI Therapy</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">AI Therapy</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <!-- Selection Section -->
+    <section class="selection">
+        <h2>Select Your Options</h2>
+
+        <!-- Step 1: Conflict Type -->
+        <div id="step1" class="step">
+            <h3>1. Select the Type of Conflict</h3>
+            <div class="options">
+                <button onclick="selectConflict('verbal')">Verbal</button>
+                <button onclick="selectConflict('physical')">Physical</button>
+                <button onclick="selectConflict('assumptional')">Assumptional</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Emotion Type -->
+        <div id="step2" class="step hidden">
+            <h3>2. Select the Type of Emotion</h3>
+            <div class="options">
+                <button onclick="selectEmotion('depression')">Depression</button>
+                <button onclick="selectEmotion('anxiety')">Anxiety</button>
+                <button onclick="selectEmotion('anger')">Anger</button>
+                <button onclick="selectEmotion('fear')">Fear</button>
+                <button onclick="selectEmotion('sadness')">Sadness</button>
+                <button onclick="selectEmotion('rage')">Rage</button>
+                <button onclick="selectEmotion('forced')">Forced</button>
+                <button onclick="selectEmotion('disgusted')">Disgusted</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Response Type -->
+        <div id="step3" class="step hidden">
+            <h3>3. Select the Type of Response</h3>
+            <div class="options">
+                <button onclick="selectResponse('disagreement')">Show Disagreement</button>
+                <button onclick="selectResponse('polite')">Polite</button>
+                <button onclick="selectResponse('neutral')">Neutral</button>
+                <button onclick="selectResponse('pleasurable')">Pleasurable</button>
+                <button onclick="selectResponse('apologetic')">Apologetic</button>
+                <button onclick="selectResponse('indirect')">Indirect</button>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div id="submit" class="hidden">
+            <button onclick="submitSelections()">Submit</button>
+        </div>
+    </section>
+
+    <!-- Link to JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
