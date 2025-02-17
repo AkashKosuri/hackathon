@@ -304,6 +304,40 @@ nav {
     z-index: 1000;
     height: 80px; /* Fixed height for the navigation bar */
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body covers the full viewport */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Default background for the page */
+.selection-page {
+    background-color: #f0f4f8; /* Fallback background color */
+    height: 100vh; /* Ensure the page covers the entire viewport */
+    position: relative; /* Ensure the body is a positioning context */
+    z-index: 1; /* Ensure content is above the background */
+}
+
+/* Background for the first step */
+.step1-background {
+    background-image: url('FirstBackground.jpg'); /* Path to your picture */
+    background-size: cover; /* Stretch the image to cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Ensure the container covers the full viewport height */
+    width: 100%; /* Ensure the container covers the full width */
+    position: fixed; /* Fix the container to the viewport */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place the background behind the content */
+}
+
+/* Ensure content is above the background */
+.selection {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the background */
+}
 
 nav .logo {
     font-size: 24px;
@@ -340,14 +374,22 @@ nav ul li a:hover {
 }
 
 .step {
-    margin-bottom: 40px;
+    padding-top: 40px; /* Add space at the top */
+    text-align: center; /* Center-align the content */
+    margin-bottom: 20px; /* Add space between steps */
 }
 
+/* Style the heading inside the step */
 .step h3 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #1a1a2e; /* Dark blue for headings */
-    font-family: 'Playfair Display', serif; /* Elegant font for headings */
+    margin-bottom: 30px; /* Add space below the heading */
+    font-size: 28px; /* Adjust font size */
+    color: #1a1a2e; /* Dark blue for the heading */
+    font-family: 'Playfair Display', serif; /* Elegant font for the heading */
+}
+
+/* Style the buttons inside the step */
+.step .options button {
+    margin: 15px; /* Add space between buttons */
 }
 
 .options {
