@@ -29,12 +29,10 @@ Built entirely with free tools and APIs.
 How It Works
 TherapyAI uses the Gemini 1.5 Flash model to generate responses. It maintains a conversation history to provide context-aware replies. The chatbot is designed to simulate a therapeutic conversation, offering support and resources for mental health concerns.
 
-Technologies Used
+Technologies Used:
 Language Model: Gemini 1.5 Flash
 
-Programming Language: Python
-
-Libraries:
+Programming Language: Python, JavaScript, HTML, CSS
 
 google-generativeai: For interacting with the Gemini API.
 
@@ -42,4 +40,4 @@ pandas: For data preprocessing (if using a dataset).
 
 collections.deque: For managing conversation history.
 
-Hosting: Hugging Face Spaces, Streamlit, or Gradio (for deployment).
+Hosting: Vercel
