@@ -62,7 +62,49 @@ function animate() {
 
 init();
 animate();
+// Get elements
+const aboutUsBtn = document.getElementById('about-us-btn');
+const faqBtn = document.getElementById('faq-btn');
+const dialogBox = document.getElementById('dialog-box');
+const closeDialogBtn = document.getElementById('close-dialog-btn');
+const dialogTitle = document.getElementById('dialog-title');
+const dialogText = document.getElementById('dialog-text');
 
+// About Us content
+const aboutUsContent = {
+    title: "About Us",
+    text: "Welcome to Therapy AI! We are dedicated to providing accessible and compassionate mental health support through advanced AI technology. Our mission is to help you navigate your emotions and find the resources you need to thrive. Whether you're feeling sad, anxious, or just need someone to talk to, Therapy AI is here for you."
+};
+
+// FAQ content
+const faqContent = {
+    title: "FAQ",
+    text: "Q: How does Therapy AI work? A: Therapy AI uses natural language processing to understand your emotions and provide tailored responses. Simply select how you're feeling and what you need, and our AI will guide you through the process. Q: Is Therapy AI a replacement for professional therapy? A: No, Therapy AI is not a replacement for professional therapy. It is a tool to provide support and resources, but we always recommend consulting a licensed therapist for serious concerns."
+};
+
+// Open dialog box with content
+function openDialog(content) {
+    dialogTitle.textContent = content.title;
+    dialogText.textContent = content.text;
+    dialogBox.classList.remove('hidden');
+}
+
+// Close dialog box
+function closeDialog() {
+    dialogBox.classList.add('hidden');
+}
+
+// Event listeners
+aboutUsBtn.addEventListener('click', () => openDialog(aboutUsContent));
+faqBtn.addEventListener('click', () => openDialog(faqContent));
+closeDialogBtn.addEventListener('click', closeDialog);
+
+// Close dialog box when clicking outside of it
+window.addEventListener('click', (event) => {
+    if (event.target === dialogBox) {
+        closeDialog();
+    }
+});
 // Resize canvas on window resize
 window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;

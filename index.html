@@ -25,8 +25,63 @@
             <li><a href="#">FAQ</a></li>
         </ul>
     </nav>
+     <!-- Navigation Bar -->
+<nav>
+    <div class="logo">Therapy AI</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><button id="about-us-btn">About Us</button></li>
+        <li><button id="faq-btn">FAQ</button></li>
+    </ul>
+</nav>
 
-    <!-- Hero Section -->
+<dialog id="dialog-box">
+    <div class="dialog-content">
+        <span id="close-dialog-btn" class="close-btn">&times;</span>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-text"></p>
+    </div>
+</dialog>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const aboutUsBtn = document.getElementById("about-us-btn");
+        const faqBtn = document.getElementById("faq-btn");
+        const dialogBox = document.getElementById("dialog-box");
+        const closeDialogBtn = document.getElementById("close-dialog-btn");
+        const dialogTitle = document.getElementById("dialog-title");
+        const dialogText = document.getElementById("dialog-text");
+
+        function openDialog(title, text) {
+            dialogTitle.textContent = title;
+            dialogText.textContent = text;
+            dialogBox.showModal(); // Opens the dialog
+        }
+
+        aboutUsBtn.addEventListener("click", function () {
+            openDialog("About Us", "Therapy AI is dedicated to providing safe, confidential, and AI-powered mental health support.");
+        });
+
+        faqBtn.addEventListener("click", function () {
+            openDialog("FAQ", "Here are some frequently asked questions about our service...");
+        });
+
+        closeDialogBtn.addEventListener("click", function () {
+            dialogBox.close(); // Closes the dialog
+        });
+
+        // Close dialog when clicking outside of it
+        dialogBox.addEventListener("click", function (event) {
+            if (event.target === dialogBox) {
+                dialogBox.close();
+            }
+        });
+    });
+</script>
+
+
+
+
+<!-- Hero Section -->
     <header class="hero">
         <h1>Welcome to Your Safe Place</h1>
         <p>Experience confidential, accessible, and personalized mental health support 24/7.</p>
