@@ -90,3 +90,49 @@ function submitSelections() {
     alert("Redirecting to the chatbot...");
     // Redirect to the chatbot page or start the chatbot conversation
 }
+// Function to handle submission and show the chat interface
+function submitSelections() {
+    // Hide the selection section
+    document.querySelector('.selection').classList.add('hidden');
+
+    // Show the chat interface
+    const chatInterface = document.getElementById('chat-interface');
+    chatInterface.classList.remove('hidden');
+
+    // Add event listeners for the chat interface
+    document.getElementById('chat-send-btn').addEventListener('click', sendMessage);
+    document.getElementById('chat-input').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // Function to send a message
+    function sendMessage() {
+        const input = document.getElementById('chat-input');
+        const message = input.value.trim();
+
+        if (message !== "") {
+            const chatBox = document.getElementById('chat-box');
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user');
+            userMessage.textContent = message;
+            chatBox.appendChild(userMessage);
+
+            // Clear input
+            input.value = '';
+
+            // Scroll to the bottom of the chat box
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Simulate a bot response (optional)
+            setTimeout(() => {
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('message', 'bot');
+                botMessage.textContent = "This is a bot response.";
+                chatBox.appendChild(botMessage);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000);
+        }
+    }
+}
